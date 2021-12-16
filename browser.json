@@ -1,0 +1,23 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.framework7.myapp"
+    },
+    "cordova-plugin-browsersync-gen2": {
+      "PACKAGE_NAME": "io.framework7.myapp"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [],
+  "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.5",
+    "cordova-plugin-browsersync-gen2": "1.1.7"
+  }
+}

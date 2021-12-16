@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Vendor",
+  "short_name": "Vendor",
+  "version": "io.vendor.myapp",
+  "description": "Aplicacion pensada para agilizar el trabajo\n        de la empresa en referencia a sus vendedores en la calle",
+  "author": "Apache Cordova Team",
+  "icons": [],
+  "start_url": "index.html",
+  "theme_color": "#2196f3"
+}

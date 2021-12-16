@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    -->
+    <!-- Required meta tags-->
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- Color theme for statusbar -->
+    <!-- <meta name="theme-color" content="#2196f3"> -->
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Your app title -->
+    <title>Vendor App</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="lib/framework7/framework7-bundle.min.css" />
+    <!-- Path to icons -->
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/framework7-icons.css" />
+    <!-- <link rel="stylesheet" href="path/to/framework7-icons.css"> -->
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="panel panel-left panel-cover panel-init">
+            <div class="block-title">Vendor Tu Menu</div>
+            <div class="block">
+                <div class="row">
+                    <div class="col-100 medium-33 menu_item">
+                        <a href="/index/" class="chip-media menu_avatar menu_item_link panel-close">
+                            <img src="img/icons/avatar/avatar1.png" alt="avatar" />
+                            <span class="menu_item_text">Avatar</span>
+                        </a>
+                    </div>
+
+                    <div class="col-100 medium-33 menu_item">
+                        <a href="/index/" class="menu_item_link panel-close">
+                            <img src="img/icons/home.png" alt="Home" />
+                            <span class="menu_item_text">Home</span>
+                        </a>
+                    </div>
+
+                    <div class="col-100 medium-33 menu_item">
+                        <a href="/pedido/" class="menu_item_link panel-close">
+                            <img src="img/icons/carrito.png" alt="Pedidos" />
+                            <span class="menu_item_text">Pedidos</span>
+                        </a>
+                    </div>
+
+                    <div class="col-100 medium-33 menu_item">
+                        <a href="/busqueda/" class="menu_item_link panel-close">
+                            <img src="img/icons/buscar.png" alt="Busqueda" />
+                            <span class="menu_item_text">Busqueda</span>
+                        </a>
+                    </div>
+
+                    <div class="col-100 medium-33 menu_item">
+                        <a href="/clientes/" class="menu_item_link panel-close">
+                            <img src="img/icons/add_cliente.png" alt="Cliente" />
+                            <span class="menu_item_text">Cliente</span>
+                        </a>
+                    </div>
+
+                    <div class="col-100 medium-33 menu_item">
+                        <a href="/user/" class="menu_item_link panel-close">
+                            <img src="img/icons/cuenta.png" alt="Usuario" />
+                            <span class="menu_item_text">Usuario</span>
+                        </a>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <span>Dark Theme</span>
+                            <label class="toggle toggle-init color-black">
+                                <input type="checkbox" checked />
+                                <span class="toggle-icon"></span>
+                            </label>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Statusbar overlay -->
+        <div class="statusbar"></div>
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar -->
+            <div class="navbar">
+                <div class="navbar-bg"></div>
+                <div class="navbar-inner">
+                    <div class="title">Tu Vendedor en la Calle - App</div>
+                </div>
+            </div>
+
+            <!-- Toolbar -->
+            <div class="toolbar toolbar-bottom">
+                <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    <a href="#" data-panel=".panel-left" class="panel-open">
+                        <img src="img/icons/menu.png" alt="" />
+                    </a>
+                    <a href="/index/"><img src="img/icons/home.png" alt="home" /></a>
+                    <a href="/busqueda/"><img src="img/icons/buscar.png" alt="buscar" /></a>
+                    <a href="/pedido/"><img src="img/icons/carrito.png" alt="carrito" /></a>
+                    <a href="/clientes/"><img src="img/icons/add_cliente.png" alt="cliente" /></a>
+                    <a href="/user/"><img src="img/icons/cuenta.png" alt="cuenta" /></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-page="home" class="page">
+            Scrollable page content
+            <div class="page-content">
+                <div class="content-block">
+                    <div class="content-block-inner">
+                        <div class="row center_web_mobile">
+                            <div class="col-100">
+                                <img class="logo" src="img/carr.png" alt="logo" href="home.html" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+    <!--<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>-->
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCr9KGY6e-tVeQcoABxlZFoXH1LBjCunco",
+            authDomain: "app-f7.firebaseapp.com",
+            projectId: "app-f7",
+            storageBucket: "app-f7.appspot.com",
+            messagingSenderId: "325606874614",
+            appId: "1:325606874614:web:64cfdc755137dad5017bd7",
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/framework7-bundle.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>
